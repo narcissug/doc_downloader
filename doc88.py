@@ -16,10 +16,10 @@ from img2pdf import conpdf
 
 def download(url):
     option = webdriver.ChromeOptions()
-    # option.add_argument('headless')
-    option.add_argument('log-level=3')
+    # option.add_argument('headless')#隐藏窗口
+    option.add_argument('log-level=3')#设置日志等级为3，不打印调试信息
     driver = webdriver.Chrome(
-        executable_path='.//chromedriver', chrome_options=option)
+        executable_path='.//chromedriver', chrome_options=option)#设置chromedriver路径
 
     title = "output"
     try:
